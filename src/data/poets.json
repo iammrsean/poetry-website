@@ -1,0 +1,34 @@
+[
+  {
+    "id": "li-bai",
+    "name": "李白",
+    "dynasty": "唐",
+    "style": "浪漫主义",
+    "bio": "字太白，号青莲居士，唐代伟大的浪漫主义诗人，被后人誉为「诗仙」。其诗豪迈奔放，想象丰富，语言流转自然。",
+    "avatar": "/images/poets/li-bai.png"
+  },
+  {
+    "id": "meng-haoran",
+    "name": "孟浩然",
+    "dynasty": "唐",
+    "style": "山水田园",
+    "bio": "唐代著名的山水田园派诗人，与王维并称「王孟」。诗风清淡自然，意境幽远。",
+    "avatar": "/images/poets/meng-haoran.png"
+  },
+  {
+    "id": "du-mu",
+    "name": "杜牧",
+    "dynasty": "唐",
+    "style": "晚唐风骨",
+    "bio": "字牧之，号樊川居士，晚唐杰出诗人，与李商隐并称「小李杜」。诗风俊爽清丽。",
+    "avatar": "/images/poets/du-mu.png"
+  },
+  {
+    "id": "hai-zi",
+    "name": "海子",
+    "dynasty": "现代",
+    "style": "浪漫主义",
+    "bio": "原名查海生，中国当代著名诗人。诗歌充满浪漫主义色彩，意象瑰丽，对土地与生命有深刻关注。",
+    "avatar": "/images/poets/hai-zi.png"
+  }
+]
