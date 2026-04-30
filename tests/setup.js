@@ -1,9 +1,14 @@
+// vi is available globally without import because vitest injects it when
+// globals: true is set in the vitest config (see vite.config.js / vitest.config.js).
+
 // Mock HTMLCanvasElement for jsdom (which has no real Canvas)
 HTMLCanvasElement.prototype.getContext = () => ({
   clearRect: vi.fn(),
   fillRect: vi.fn(),
   beginPath: vi.fn(),
   arc: vi.fn(),
+  ellipse: vi.fn(),
+  quadraticCurveTo: vi.fn(),
   fill: vi.fn(),
   stroke: vi.fn(),
   moveTo: vi.fn(),
