@@ -12,6 +12,7 @@
     <div class="poet-info">
       <h3 class="poet-name">{{ poet.name }}</h3>
       <p class="poet-meta">{{ poet.dynasty }} · {{ poet.style }}</p>
+      <p class="poet-bio">{{ poet.bio }}</p>
     </div>
   </RouterLink>
 </template>
@@ -31,27 +32,27 @@ function onAvatarError() { avatarFailed.value = true }
 <style scoped>
 .poet-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #f5f1e8;
   border-radius: 16px;
   text-decoration: none;
   transition: background 0.2s;
 }
 
 .poet-card:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: #ede8dc;
 }
 
 .poet-avatar {
   position: relative;
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.15);
+  background: #e0d8c8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,22 +66,30 @@ function onAvatarError() { avatarFailed.value = true }
 
 .avatar-fallback {
   font-family: serif;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  color: #8a7060;
 }
 
 .poet-name {
   font-family: serif;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
   letter-spacing: 2px;
   margin: 0 0 4px;
 }
 
 .poet-meta {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #999;
   letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.poet-bio {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
   margin: 0;
 }
 </style>
