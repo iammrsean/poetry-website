@@ -3,7 +3,7 @@
     <NavBar />
     <header class="poet-header">
       <div class="poet-avatar-large">
-        <img :src="poet.avatar" :alt="poet.name" @error="onAvatarError" />
+        <img v-show="!avatarFailed" :src="poet.avatar" :alt="poet.name" @error="onAvatarError" />
         <span v-if="avatarFailed" class="avatar-fallback-large">{{ poet.name[0] }}</span>
       </div>
       <div class="poet-header-info">

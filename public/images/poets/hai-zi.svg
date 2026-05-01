@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#c8e6f5"/>
+      <stop offset="50%" stop-color="#81c784"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </radialGradient>
+    <clipPath id="circle"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <g clip-path="url(#circle)">
+    <!-- ocean horizon -->
+    <rect x="0" y="115" width="200" height="85" fill="#1565c0" opacity="0.75"/>
+    <rect x="0" y="112" width="200" height="8" fill="#42a5f5" opacity="0.5"/>
+    <!-- sun -->
+    <circle cx="100" cy="55" r="28" fill="#fff9c4" opacity="0.92"/>
+    <circle cx="100" cy="55" r="40" fill="#fff176" opacity="0.2"/>
+    <!-- wheat field -->
+    <path d="M0 118 Q50 108 100 115 Q150 108 200 118 L200 200 L0 200Z" fill="#81c784" opacity="0.4"/>
+    <!-- figure (modern, simple) -->
+    <ellipse cx="100" cy="108" rx="14" ry="18" fill="#5d4037"/>
+    <ellipse cx="100" cy="87" rx="11" ry="11" fill="#8d6e63"/>
+    <!-- house outline -->
+    <path d="M25 100 L35 85 L45 100 Z" fill="white" opacity="0.6"/>
+    <rect x="29" y="100" width="12" height="10" fill="white" opacity="0.6"/>
+    <!-- waves -->
+    <path d="M0 130 Q25 125 50 130 Q75 135 100 130 Q125 125 150 130 Q175 135 200 130" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <!-- name label -->
+    <rect x="0" y="155" width="200" height="45" fill="rgba(10,50,100,0.55)"/>
+    <text x="100" y="174" font-family="serif" font-size="20" fill="#e3f2fd" text-anchor="middle" letter-spacing="4">海子</text>
+    <text x="100" y="192" font-family="serif" font-size="11" fill="rgba(180,220,255,0.8)" text-anchor="middle" letter-spacing="2">现代 · 诗人</text>
+  </g>
+</svg>

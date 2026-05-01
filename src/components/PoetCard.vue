@@ -2,6 +2,7 @@
   <RouterLink :to="`/poet/${poet.id}`" class="poet-card">
     <div class="poet-avatar">
       <img
+        v-show="!avatarFailed"
         :src="poet.avatar"
         :alt="poet.name"
         @error="onAvatarError"

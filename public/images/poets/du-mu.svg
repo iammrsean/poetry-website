@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#546e7a"/>
+      <stop offset="100%" stop-color="#263238"/>
+    </radialGradient>
+    <clipPath id="circle"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <g clip-path="url(#circle)">
+    <!-- rain atmosphere -->
+    <rect x="0" y="0" width="200" height="200" fill="#78909c" opacity="0.3"/>
+    <!-- rain drops -->
+    <line x1="30" y1="10" x2="34" y2="35" stroke="rgba(200,230,255,0.4)" stroke-width="1"/>
+    <line x1="60" y1="0" x2="64" y2="25" stroke="rgba(200,230,255,0.3)" stroke-width="1"/>
+    <line x1="90" y1="15" x2="94" y2="40" stroke="rgba(200,230,255,0.4)" stroke-width="1"/>
+    <line x1="120" y1="5" x2="124" y2="30" stroke="rgba(200,230,255,0.35)" stroke-width="1"/>
+    <line x1="150" y1="20" x2="154" y2="45" stroke="rgba(200,230,255,0.3)" stroke-width="1"/>
+    <line x1="170" y1="8" x2="174" y2="33" stroke="rgba(200,230,255,0.4)" stroke-width="1"/>
+    <!-- pavilion -->
+    <path d="M60 115 L100 88 L140 115 Z" fill="#1c3040" opacity="0.9"/>
+    <rect x="88" y="115" width="24" height="25" fill="#1c3040" opacity="0.9"/>
+    <!-- figure under pavilion -->
+    <ellipse cx="100" cy="112" rx="10" ry="14" fill="#c8a96e" opacity="0.8"/>
+    <ellipse cx="100" cy="95" rx="8" ry="8" fill="#d4a96e" opacity="0.8"/>
+    <!-- ground puddles -->
+    <ellipse cx="100" cy="178" rx="60" ry="8" fill="#3e5258" opacity="0.6"/>
+    <!-- apricot blossoms hint -->
+    <circle cx="25" cy="100" r="4" fill="#ffb3c1" opacity="0.7"/>
+    <circle cx="175" cy="90" r="3" fill="#ffb3c1" opacity="0.6"/>
+    <circle cx="20" cy="85" r="3" fill="#ffb3c1" opacity="0.5"/>
+    <!-- name label -->
+    <rect x="0" y="155" width="200" height="45" fill="rgba(0,0,0,0.5)"/>
+    <text x="100" y="174" font-family="serif" font-size="20" fill="#cfd8dc" text-anchor="middle" letter-spacing="4">杜牧</text>
+    <text x="100" y="192" font-family="serif" font-size="11" fill="rgba(180,200,210,0.75)" text-anchor="middle" letter-spacing="2">晚唐 · 樊川</text>
+  </g>
+</svg>

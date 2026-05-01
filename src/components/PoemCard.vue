@@ -1,6 +1,8 @@
 <template>
   <RouterLink :to="`/poem/${poem.id}`" class="poem-card">
-    <div class="card-scene" :class="`scene-${poem.scene}`"></div>
+    <div class="card-scene">
+      <canvas ref="canvasRef" class="card-canvas" />
+    </div>
     <div class="card-body">
       <h3 class="card-title">{{ poem.title }}</h3>
       <p class="card-meta">{{ poem.author }} · {{ poem.dynasty }}</p>
@@ -10,13 +12,31 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
 
-defineProps({
+const props = defineProps({
   poem: {
     type: Object,
     required: true,
   },
+})
+
+const canvasRef = ref(null)
+let sceneModule = null
+
+onMounted(async () => {
+  const canvas = canvasRef.value
+  if (!canvas) return
+  canvas.width = canvas.offsetWidth || 280
+  canvas.height = canvas.offsetHeight || 120
+  const mod = await import(`../scenes/${props.poem.scene}.js`)
+  sceneModule = mod
+  mod.init(canvas)
+})
+
+onUnmounted(() => {
+  if (sceneModule) sceneModule.destroy()
 })
 </script>
 
@@ -39,13 +59,15 @@ defineProps({
 
 .card-scene {
   height: 120px;
+  position: relative;
+  overflow: hidden;
 }
 
-.scene-moonlit-night { background: linear-gradient(135deg, #0d1b2a, #1a3a5c); }
-.scene-spring-morning { background: linear-gradient(135deg, #c8e6f5, #a5d6a7); }
-.scene-river-flow { background: linear-gradient(135deg, #1a3a5c, #3a8fc4); }
-.scene-rain { background: linear-gradient(135deg, #546e7a, #90a4ae); }
-.scene-autumn { background: linear-gradient(135deg, #bf8040, #8b4513); }
+.card-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 .card-body {
   padding: 16px;

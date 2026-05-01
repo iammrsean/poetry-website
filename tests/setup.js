@@ -1,6 +1,9 @@
 // vi is available globally without import because vitest injects it when
 // globals: true is set in the vitest config (see vite.config.js / vitest.config.js).
 
+global.requestAnimationFrame = (cb) => setTimeout(cb, 16)
+global.cancelAnimationFrame = (id) => clearTimeout(id)
+
 // Mock HTMLCanvasElement for jsdom (which has no real Canvas)
 HTMLCanvasElement.prototype.getContext = () => ({
   clearRect: vi.fn(),

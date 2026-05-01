@@ -1,10 +1,6 @@
 <template>
   <nav class="navbar">
     <RouterLink to="/" class="navbar-brand">诗词天地</RouterLink>
-    <div class="navbar-links">
-      <RouterLink to="/">探索</RouterLink>
-      <RouterLink to="/poet/all">诗人</RouterLink>
-    </div>
   </nav>
 </template>
 
